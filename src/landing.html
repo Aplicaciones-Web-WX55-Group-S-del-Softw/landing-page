@@ -14,36 +14,36 @@
         .work-sans {
             font-family: 'Work Sans', sans-serif;
         }
-                
-        #menu-toggle:checked + #menu {
+
+        #menu-toggle:checked+#menu {
             display: block;
         }
-        
+
         .hover\:grow {
             transition: all 0.3s;
             transform: scale(1);
         }
-        
+
         .hover\:grow:hover {
             transform: scale(1.02);
         }
-        
-        .carousel-open:checked + .carousel-item {
+
+        .carousel-open:checked+.carousel-item {
             position: static;
             opacity: 100;
         }
-        
+
         .carousel-item {
             -webkit-transition: opacity 0.6s ease-out;
             transition: opacity 0.6s ease-out;
         }
-        
-        #carousel-1:checked ~ .control-1,
-        #carousel-2:checked ~ .control-2,
-        #carousel-3:checked ~ .control-3 {
+
+        #carousel-1:checked~.control-1,
+        #carousel-2:checked~.control-2,
+        #carousel-3:checked~.control-3 {
             display: block;
         }
-        
+
         .carousel-indicators {
             list-style: none;
             margin: 0;
@@ -55,10 +55,10 @@
             text-align: center;
             z-index: 10;
         }
-        
-        #carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
-        #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
-        #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+
+        #carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+        #carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+        #carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
             color: #000;
         }
     </style>
@@ -72,7 +72,8 @@
         <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-6 py-3">
 
             <label for="menu-toggle" class="cursor-pointer md:hidden block">
-                <svg class="fill-current text-gray-900" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                <svg class="fill-current text-gray-900" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    viewBox="0 0 20 20">
                     <title>menu</title>
                     <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
                 </svg>
@@ -82,17 +83,23 @@
             <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-2" id="menu">
                 <nav>
                     <ul class="md:flex items-center justify-between text-base pt-4 md:pt-0 text-white">
-                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="#">Inicio</a></li>
-                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="#">Conócenos</a></li>
-                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="#">Tarifas</a></li>
-                        <li><button><a class="inline-block bg-black rounded-2xl text-white py-2 px-4" href="#">Publica tu anuncio</a></button></li>
-                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="#">Ingresar</a></li>
+                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4"
+                                href="#">Inicio</a></li>
+                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4"
+                                href="#">Conócenos</a></li>
+                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4"
+                                href="#">Tarifas</a></li>
+                        <li><button><a class="inline-block bg-black rounded-2xl text-white py-2 px-4" href="#">Publica
+                                    tu anuncio</a></button></li>
+                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4"
+                                href="#">Ingresar</a></li>
                     </ul>
                 </nav>
             </div>
 
             <div class="order-1 md:order-1">
-                <a class="flex items-center tracking-wide no-underline hover:no-underline font-bold text-white text-xl " href="#">
+                <a class="flex items-center tracking-wide no-underline hover:no-underline font-bold text-white text-xl "
+                    href="#">
                     <img src="img/img-logo.png" width="60px">
                     FarmLogiTech
                 </a>
@@ -100,17 +107,20 @@
 
         </div>
     </nav>
-
+    <!--Section imagenes con carrusel MAKU-->
     <div class="carousel relative container mx-auto" style="max-width:1600px;">
         <div class="carousel-inner relative overflow-hidden w-full">
-            <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+            <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden=""
+                checked="checked">
             <div class="carousel-item absolute opacity-0" style="height:50vh;">
                 <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right">
                     <img src="img/img-granja1.jpg" alt="Descripción de la imagen">
                 </div>
             </div>
-            <label for="carousel-3" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-            <label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+            <label for="carousel-3"
+                class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+            <label for="carousel-2"
+                class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
 
             <!--Slide 2-->
             <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
@@ -119,119 +129,128 @@
                     <img src="img/img-cuidado.jpg" class="w-full">
                 </div>
             </div>
-            <label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-            <label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+            <label for="carousel-1"
+                class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+            <label for="carousel-3"
+                class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
 
             <!--Slide 3-->
             <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
             <div class="carousel-item absolute opacity-0" style="height:50vh;">
                 <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-bottom">
-                     <img src="img/img-granja2.jpg" class="w-full">
+                    <img src="img/img-granja2.jpg" class="w-full">
                 </div>
             </div>
-            <label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-            <label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+            <label for="carousel-2"
+                class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+            <label for="carousel-1"
+                class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900  leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
 
 
         </div>
     </div>
 
-    <section class="bg-white w-full mt-10 flex justify-center items-center">
-        <button class="text-black items-center mr-20"> Producto</button>
-        <button class="text-black items-center"> Ubicación</button>
-        <button class="bg-green-600 text-white items-center rounded-2xl h-10 w-40  ml-20"> Buscar</button>
+    <!--SECCIÓN DE NOSOTROS (que brindamos) para Fernando-->
 
-    </section>
-    
 
-    <section class="bg-white py-8 flex flex-wrap flex-col-3 justify-center gap-4">
+    <!--Section de CARACTERISTICAS para Rodri-->
 
-            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                <a href="#">
-                    <img class="rounded-t-lg" src="img/img-granja1.jpg" alt="" />
-                </a>
-                <div class="p-5">
-                    <a href="#">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-green-600">Granja Tsuneo</h5>
-                    </a>
-                <ul>
-                    <li>Asia, Lima</li>
-                    <li>Pollos</li>
-                    <li>50 hs</li>
-                    <li>s/293,000,000</li>
-                </ul>
-                <br/>
-                <div class="flex gap-2">
-                    <p>20 Graneros</p>
-                    <p>20 Corrales</p>
-                    <p>20 Agua potable</p>
-                </div>
-                </div>
-            </div>
 
-            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                <a href="#">
-                    <img class="rounded-t-lg" src="img/img-granja1.jpg" alt="" />
-                </a>
-                <div class="p-5">
-                    <a href="#">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-green-600">Granja Sol y Vida</h5>
-                    </a>
-                <ul>
-                    <li>Asia, Lima</li>
-                    <li>Pollos</li>
-                    <li>50 hs</li>
-                    <li>s/293,000,000</li>
-                </ul>
-                <br/>
-                <div class="flex gap-2">
-                    <p>20 Graneros</p>
-                    <p>20 Corrales</p>
-                    <p>20 Agua potable</p>
-                </div>
-                </div>
-            </div>
+    <!--Section de TARIFAS Giacomo -->
 
-            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                <a href="#">
-                    <img class="rounded-t-lg" src="img/img-granja1.jpg" alt="" />
-                </a>
-                <div class="p-5">
-                    <a href="#">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-green-600">Granja Tigres </h5>
-                    </a>
-                <ul>
-                    <li>Asia, Lima</li>
-                    <li>Pollos</li>
-                    <li>50 hs</li>
-                    <li>s/293,000,000</li>
-                </ul>
-                <br/>
-                <div class="flex gap-2">
-                    <p>20 Graneros</p>
-                    <p>20 Corrales</p>
-                    <p>20 Agua potable</p>
-                </div>
-                </div>
-            </div>
-            
-    
-    
-    </section>
-    
-    <footer class="bg-green-800 py-8 text-center">
-        <!-- SIGUENOS EN REDES SOCIALES -->
-        <p class="mb-4 text-white">Síguenos en nuestras redes sociales:</p>
-        <div class="social-icons flex justify-center text-white">
-            <a href="#" class="mr-4"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="mr-4"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="mr-4"><i class="fab fa-instagram"></i></a>
+
+    <!--SECCION MÉTODO DE PAGOS-->
+    <div class="mx-auto md:mt-48 mt-20 max-w-7xl px-6  lg:px-8">
+        <h2 class="text-center text-3xl font-bold text-black mb-10"> Puedes pagar con: </h2>
+        <div
+            class="mx-auto grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-12 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+            <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="img/img-yape.png" alt="yape"
+                width="158" height="48">
+            <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="img/img-plin.png" alt="plin"
+                width="158" height="48">
+            <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="img/img-mastercard.png"
+                alt="mastercard" width="158" height="48">
+            <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="img/img-paypal.png" alt="paypal"
+                width="158" height="48">
+            <img class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1" src="img/img-visa.jpg"
+                alt="visa" width="158" height="48">
         </div>
-        <!-- DERECHOS DE AUTOR -->
-        <p class="mt-8 text-white">&copy; 2024 FarmLogiTech. Todos los derechos reservados.</p>
-    </footer>
-                                            
-   
+        <!--SECCIÓN DE COLABORADORES-->
+
+        <div class="bg-white py-24 sm:py-32">
+            <div class="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
+                <div class="max-w-2xl">
+                    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Colaboradores</h2>
+                    <p class="mt-6 text-lg leading-8 text-gray-600">Integrantes de la creacion del proyecto FarmLogiTech
+                    </p>
+                </div>
+                <ul role="list" class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
+                    <li>
+                        <div class="flex items-center gap-x-6">
+                            <img class="h-16 w-16 rounded-full" src="img/integrante-Mathias.jpg"
+                                alt="Mathias Kunimoto  ">
+                            <div>
+                                <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Mathias
+                                    Kunimoto</h3>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center gap-x-6">
+                            <img class="h-16 w-16 rounded-full" src="img/integrante-rodrigo.jpg" alt="Rodrigo Aguilar">
+                            <div>
+                                <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Rodrigo
+                                    Aguilar</h3>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center gap-x-6">
+                            <img class="h-16 w-16 rounded-full" src="img/integrante-Fernando.jpg"
+                                alt="Fernando Salgado">
+                            <div>
+                                <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Fernando
+                                    Salgado</h3>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center gap-x-6">
+                            <img class="h-16 w-16 rounded-full" src="img/integrante-giacomo.jpg" alt="Giacomo Zoppi">
+                            <div>
+                                <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Giacomo Zoppi
+                                </h3>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center gap-x-6">
+                            <img class="h-16 w-16 rounded-full" src="img/integrante-jean.jpg"
+                                alt="Jean Franco Barrionuevo">
+                            <div>
+                                <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Jean Franco
+                                    Barrionuevo</h3>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <footer class="bg-green-800 py-8 text-center">
+            <!-- SIGUENOS EN REDES SOCIALES -->
+            <p class="mb-4 text-white">Síguenos en nuestras redes sociales:</p>
+            <div class="social-icons flex justify-center text-white">
+                <a href="#" class="mr-4"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="mr-4"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="mr-4"><i class="fab fa-instagram"></i></a>
+            </div>
+            <!-- DERECHOS DE AUTOR -->
+            <p class="mt-8 text-white">&copy; 2024 FarmLogiTech. Todos los derechos reservados.</p>
+        </footer>
+
+
 </body>
 
 </html>
